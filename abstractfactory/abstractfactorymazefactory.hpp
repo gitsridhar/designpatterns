@@ -1,11 +1,14 @@
-#ifdef __MAZEFACTORY__
-#define __MAZEFACTORY__
+#ifndef __ABSTRACTFACTORYMAZEFACTORY__
+#define __ABSTRACTFACTORYMAZEFACTORY__
 
-#include "../maze"
+#include "../maze.hpp"
+#include "../door.hpp"
+#include "../room.hpp"
+#include "../wall.hpp"
 
-class MazeFactory {
+class AbstractFactoryMazeFactory {
     public:
-        MazeFactory();
+        AbstractFactoryMazeFactory() {};
 
         virtual Maze *MakeMaze() const {
             return new Maze;
