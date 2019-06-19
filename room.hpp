@@ -7,7 +7,7 @@ enum Direction {North, South, East, West};
 
 class Room : public MapSite {
     public:
-        Room(int roomNo);
+        Room(int roomNo = 0);
 
         int GetRoomNumber() {
             return _roomNumber;
@@ -19,6 +19,8 @@ class Room : public MapSite {
 
     private:
         MapSite *_sides[4];
+
+    protected:
         int _roomNumber;
 };
 
